@@ -24,7 +24,7 @@ btns.forEach((btn) => {
             counter/=2;
         }
         else if(style.contains('exponent')){
-            counter ^= 2;
+            counter %= 2;
         }
         else {
             return 0;
