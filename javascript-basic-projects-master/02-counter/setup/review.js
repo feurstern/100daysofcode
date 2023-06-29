@@ -18,7 +18,10 @@ btns.forEach((btn) => {
             counter = 0;
         }
         else if (style.contains('multiply')) {
-            counter = counter * counter;
+            counter *=2;
+        }
+        else if(style.contains('divide')){
+            counter/=2;
         }
         else {
             return 0;
@@ -29,6 +32,9 @@ btns.forEach((btn) => {
         }
         if (counter > 0) {
             showTextValue.style.color = "green"
+        }
+        if (counter=== 0){
+            showTextValue.style.color ="skyblue"
         }
 
         showTextValue.textContent = counter;
