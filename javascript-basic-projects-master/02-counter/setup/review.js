@@ -23,6 +23,9 @@ btns.forEach((btn) => {
         else if(style.contains('divide')){
             counter/=2;
         }
+        else if(style.contains('exponent')){
+            counter ^= 2;
+        }
         else {
             return 0;
         }
