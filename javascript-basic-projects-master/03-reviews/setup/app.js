@@ -58,6 +58,7 @@ nextButton.addEventListener('click', ()=>{
   index++;
   showPerson(index);
   index>3? index =0 : 0
+  console.log(index)
 })
 
 // shuw previous person
@@ -65,4 +66,5 @@ prevButton.addEventListener('click', ()=>{
   index--;
   showPerson(index);
   index<0? index =0 : 0
+  console.log(index)
 })
