@@ -13,3 +13,10 @@ for (let i=0; i<len;i++){
 
 console.log(`Total hours playing  : ${t}`)
 console.log(`Total time exceed : ${e}`);
+
+for(let i=1; i<=20; i++){
+    console.log(`${i}. Hatsune Miku`)
+}
+for(let i=5; i<=100; i+=5){
+    console.log(`${i}`)
+}
