@@ -56,15 +56,15 @@ const showPerson=(person)=>{
 //hosw neext person
 nextButton.addEventListener('click', ()=>{
   index++;
-  showPerson(index);
-  index>3? index =0 : 0
+  index> reviews.length -1? index=0 : 0
   console.log(index)
+  showPerson(index);
 })
 
 // shuw previous person
 prevButton.addEventListener('click', ()=>{
   index--;
-  showPerson(index);
-  index<0? index =0 : 0
+  index<reviews.length -1? index =0: 0
   console.log(index)
+  showPerson(index);
 })
