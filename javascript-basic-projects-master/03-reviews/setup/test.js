@@ -56,8 +56,8 @@ const showPeople = (person) => {
     author.textContent = item.name;
 }
 
-const getRandomNumber=()=>{
-    return Math.floor(Math.Random* len-1);
+const getRandomNumber = () => {
+    return Math.floor(Math.random() * len - 1);
 }
 
 prevBtn.addEventListener('click', () => {
@@ -73,8 +73,9 @@ nextBtn.addEventListener('click', () => {
     showPeople(index);
 })
 
-randomBtn.addEventListener('click', ()=>{
+randomBtn.addEventListener('click', () => {
     index = getRandomNumber();
+    console.log(`The random number value :${index}`)
     showPeople(index);
 })
 
