@@ -30,6 +30,10 @@ const reviews = [
   },
 ];
 
+reviews.map((data)=>(
+  data.name
+))
+
 const getJob = document.getElementById('job');
 const img = document.getElementById('person-img');
 const getAuthor = document.getElementById("author");
