@@ -1,19 +1,72 @@
-const hoursPlaying = [
-    2, 2, 3 ,3, 1 ,4, 5
+const reviews = [
+    {
+        id: 1,
+        name: 'Hatsune Miku',
+        job: 'web developer',
+        img: 'https://images2.imgbox.com/e0/57/qI5bbwvg_o.jpeg',
+        text: "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
+    },
+    {
+        id: 2,
+        name: 'anna johnson',
+        job: 'web designer',
+        img: 'https://images2.imgbox.com/2e/6e/JAMvTZ56_o.jpeg',
+        text: 'Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.',
+    },
+    {
+        id: 3,
+        name: 'peter jones',
+        job: 'intern',
+        img: 'https://images2.imgbox.com/56/88/oJvFN3l5_o.jpeg',
+        text: 'Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.',
+    },
+    {
+        id: 4,
+        name: 'bill anderson',
+        job: 'the boss',
+        img: 'https://images2.imgbox.com/8b/1c/vwWNTsCd_o.jpeg',
+        text: 'Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ',
+    },
 ];
 
-const totalHoursPLaying = 0;
-const exceedTImeLimits = 0;
+const author = document.getElementById('author');
+const job = document.getElementById('job');
+const info = document.getElementById('info');
+const img = document.getElementById('person-img')
 
-for(let i=0; i<=hoursPlaying.length; i++){
-    totalHoursPLaying+= hoursPlaying[i];
-    if(hoursPlaying[i]>2){
-        exceedTImeLimits+=1;
-    }
-    else{
-        return 0;
-    }
+//the button
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const randomBtn = document.querySelector('.random-btn');
+
+const len = reviews.length;
+// create the default
+let index = 2;
+
+window.addEventListener('DOMContentLoaded', () => {
+    // we set the variable value of item from the  object of the array. so we can access it with the shroter one.
+    showPeople(index);
+})
+
+const showPeople = (person) => {
+    const item = reviews[person];
+    img.src = item.img;
+    job.textContent = item.job;
+    info.textContent = item.text;
+    author.textContent = item.name;
 }
 
-console.log(`Total hours playing : ${totalHoursPlaying}`);
-console.log(`The exceed time list : ${exceedTimeLimits}`);
+prevBtn.addEventListener('click', () => {
+    // alert('clicked')
+    index--;
+    index<len -1?index=0:0
+    showPeople(index);
+})
+
+nextBtn.addEventListener('click', () => {
+    index++;
+    index>len-1?index=0:0;
+    showPeople(index);
+
+})
+
