@@ -56,17 +56,25 @@ const showPeople = (person) => {
     author.textContent = item.name;
 }
 
+const getRandomNumber=()=>{
+    return Math.floor(Math.Random* len-1);
+}
+
 prevBtn.addEventListener('click', () => {
     // alert('clicked')
     index--;
-    index<len -1?index=0:0
+    index < len - 1 ? index = 0 : 0
     showPeople(index);
 })
 
 nextBtn.addEventListener('click', () => {
     index++;
-    index>len-1?index=0:0;
+    index > len - 1 ? index = 0 : 0;
     showPeople(index);
+})
 
+randomBtn.addEventListener('click', ()=>{
+    index = getRandomNumber();
+    showPeople(index);
 })
 
