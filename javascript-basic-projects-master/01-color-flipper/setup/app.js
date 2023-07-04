@@ -2,6 +2,8 @@ const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
 const getHTMLBody = document.querySelector('body');
 const buttonTriggered = document.getElementById("btn");
 const color = document.getElementById("color")
+const len  = colors.length -1;
+
 
 
 buttonTriggered.addEventListener('click', ()=>{
@@ -12,5 +14,5 @@ buttonTriggered.addEventListener('click', ()=>{
 })
 
 const getRandomNumber=()=>{
-    return Math.floor(Math.random()*3)
+    return Math.floor(Math.random()*len)
 }
