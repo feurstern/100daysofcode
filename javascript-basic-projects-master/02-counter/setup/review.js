@@ -4,7 +4,7 @@ const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 const showtextValue = document.getElementById('value');
 const len = hex.length - 1;
 const getHTMLBody = document.querySelector('body');
-const showHexColourName = document.getElementById('colour')
+const showHexColourName = document.getElementById('color')
 
 
 btns.forEach((btn) => {
@@ -23,14 +23,14 @@ btns.forEach((btn) => {
             for (let i = 0; i < 6; i++) {
                 index += hex[getRandomNumber()];
 
-
             }
             getHTMLBody.style.backgroundColor = index;
+            showHexColourName.textContent = index;
 
         }
 
         counter > 0 ? showtextValue.style.color = 'green' : 0
-        counter < 0 ? showtextValue.style.color = 'red' :0
+        counter < 0 ? showtextValue.style.color = 'red' : 0
         counter === 0 ? showtextValue.style.color = 'skyblue' : 0
 
         showtextValue.textContent = counter;
