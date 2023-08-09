@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
 })
 
 const showPerson=(person)=>{
-  const item = reviewsp[person];
+  const item = reviews[person];
   img.src = item.img;
   //replacing the content whenever the index is increased
   getJob.textContent = item.job;
