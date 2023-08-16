@@ -8,9 +8,11 @@ const links = document.querySelector('.links');
 
 navToggle.addEventListener('click',()=>{
     // console.log(links.classList.contains('random'))
-    let e =links.classList
-
-    e.contains('show-links') ? e.remove('show-links'): e.add('show-links')
     
-    e.toggle('show-links')
+    links.classList.contains('show-links') ? links.classList.remove('show-links') : links.classList.add('show-links')
+    
+   links.classList.toggle('show-links')
+    // console.log(links.classList.contains('links'))
+
 })
+
