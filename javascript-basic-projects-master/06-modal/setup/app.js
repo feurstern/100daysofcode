@@ -15,5 +15,5 @@ btnTrigger.addEventListener('click', ()=>{
 
 clsBtn.addEventListener('click', ()=>{
     mdOverlay.classList.remove('open-modal')
-    alert('clicked!')
+    // alert('clicked!')
 })
