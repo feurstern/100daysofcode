@@ -1,5 +1,6 @@
 //using selectors inside the element
 const buttons = document.querySelectorAll('.question');
+console.log('The buttons:', buttons)
 
 buttons.forEach(btn=> btn.addEventListener('click',(e)=>{
     let showText = e.currentTarget.parentElement;
